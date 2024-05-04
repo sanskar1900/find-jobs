@@ -1,0 +1,38 @@
+.selectcomponent{
+   &.select{
+    display: flex;
+    border: 1px solid #cccccc;
+    align-items: center;
+    gap: 5px;
+    color: #cccccc;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+   }
+   &.displaySelectedData{
+    display: flex;
+    min-width: 100px;
+    display: flex;
+    gap: 4px;
+   }
+   &.divider{
+    width: 1px;
+    height: 20px;
+    background-color: #cccccc;
+   }
+   &.flex{
+   display: flex;
+    gap: 4px;
+    align-items: center;
+    background-color: #e6e5e5;
+    color: black;
+    border-radius: 6px;
+    padding: 0px 10px;
+   }
+   &.cross{
+    height: 16px;
+    width: 16px;
+    margin-top: 4px;
+    
+   }
+}
