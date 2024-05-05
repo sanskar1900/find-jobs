@@ -412,6 +412,8 @@ const Select = ({ filterData, setFilterData, data }) => {
           </div>
         );
         break;
+      default:
+        break;
     }
   };
   return <>{renederDropDown()}</>;

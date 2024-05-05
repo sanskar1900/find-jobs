@@ -50,5 +50,5 @@ export const filterJobsData = (filterData, allJobs, jobData) => {
     searchFilter = salaryFilter;
   }
 
-  return searchFilter?.length > 0 ? searchFilter : jobData?.jdList;
+  return searchFilter?.length > 0 ? searchFilter : [];
 };

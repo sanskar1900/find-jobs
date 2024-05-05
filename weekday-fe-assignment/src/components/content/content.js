@@ -45,7 +45,11 @@ const Content = ({ filterData }) => {
   }, []);
   useEffect(() => {
     const filteredJobsMatched = filterJobsData(filterData, allJobs, jobData);
-    setJobsToRender(filteredJobsMatched);
+    if (filteredJobsMatched?.length > 0) {
+      setJobsToRender(filteredJobsMatched);
+    } else {
+      setJobsToRender([]);
+    }
   }, [filterData, jobData]);
   useEffect(() => {
     setJobsToRender(filteredJobs);
