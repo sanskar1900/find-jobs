@@ -14,14 +14,12 @@ function App() {
     minimumBaseSlary: null,
     searchCompanyText: "",
   });
-  useEffect(() => {
-    console.log(filterData);
-  }, [filterData]);
+
   return (
     <Provider store={store}>
       <div className="App">
         <Filter filterData={filterData} setFilterData={setFilterData} />
-        <Content />
+        <Content filterData={filterData} />
       </div>
     </Provider>
   );

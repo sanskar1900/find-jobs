@@ -1,0 +1,12 @@
+.content{
+    &.center{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &.nojob{
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 1.5rem;
+    }
+}

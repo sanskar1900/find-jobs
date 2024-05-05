@@ -10,7 +10,7 @@ export const filterItems = [
           "Frontend",
           "Backend",
           "Full Stack",
-          "IOS",
+          "Ios",
           "Flutter",
           "React Native",
           "Android",
