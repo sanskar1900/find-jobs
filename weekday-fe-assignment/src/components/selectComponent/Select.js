@@ -104,9 +104,9 @@ const Select = ({ filterData, setFilterData, data }) => {
                 setShowOptions(!showOptions);
               }}
             >
-              <div className="selectcomponent minw">
-                {filterData?.roles?.length === 0 && data?.placeholder}
-              </div>
+              {filterData?.roles?.length === 0 && (
+                <div className="selectcomponent minw">{data?.placeholder}</div>
+              )}
               <div className="selectcomponent displaySelectedData">
                 {filterData?.roles?.map((selectedValue) => {
                   return (
