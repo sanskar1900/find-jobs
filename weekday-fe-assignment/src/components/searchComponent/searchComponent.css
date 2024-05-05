@@ -1,7 +1,7 @@
 .search{
     padding: 5px 10px;
     outline: none;
-   
+   min-height: 26px;
     border-radius: 4px;
     border: 1px solid #cccccc;
     font-size: 14px;

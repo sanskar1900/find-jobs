@@ -1,15 +1,5 @@
 .card{
-    &.root{
-       min-height: 550px;
-        width: 90%;
-       padding: 20px;
-        border-radius: 20px;
-        box-shadow: rgba(0, 0, 0, 0.25) 0px 1px 4px 0px !important;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-        padding-bottom: 10px;
-    }
+   
     &.flex{
         display: flex;
         gap: 0.5rem;
@@ -97,4 +87,21 @@
         margin-top: 10px;
 
     }
+         &.root {
+             min-height: 550px;
+             width: 90%;
+             padding: 20px;
+             border-radius: 20px;
+             box-shadow: rgba(0, 0, 0, 0.25) 0px 1px 4px 0px !important;
+             display: flex;
+             justify-content: space-between;
+             flex-direction: column;
+             padding-bottom: 10px;
+             transition: transform 0.3s ease;
+         }
+    
+         .root:hover{
+             transform: scale(1.2);
+             
+         }
 }

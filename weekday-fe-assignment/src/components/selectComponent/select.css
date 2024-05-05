@@ -67,8 +67,10 @@
     font-weight: 500;
    }
    .optionItem:hover{
-    background-color: #2584FF;
+    background-color: skyblue;
    }
-
+&.minw{
+    min-width: 100px;
+}
 
 }

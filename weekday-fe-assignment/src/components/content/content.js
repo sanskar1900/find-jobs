@@ -28,7 +28,7 @@ const Content = ({ filterData }) => {
         offset: (currentPage - 1) * 15,
       })
     );
-  }, []);
+  }, [currentPage]);
   useEffect(() => {
     const currentJobs = jobsToRender;
     const currentAllJobs = allJobs;
@@ -95,7 +95,7 @@ const Content = ({ filterData }) => {
       searchFilter = salaryFilter;
     }
     setJobsToRender([...searchFilter]);
-  }, [filterData]);
+  }, [filterData, jobData]);
   useEffect(() => {
     console.log("filtered job changed", filteredJobs);
     setJobsToRender(filteredJobs);
@@ -131,20 +131,22 @@ const Content = ({ filterData }) => {
             })}
           </Grid>
         ) : (
-          <>
-            <div className="content center">
-              <img
-                src="https://jobs.weekday.works/_next/static/media/nothing-found.4d8f334c.png"
-                height={200}
-                width={200}
-              ></img>
-            </div>
-            <div className="content center">
-              <div className="content nojob">
-                No Jobs available for this category at the moment
+          !isLoading && (
+            <>
+              <div className="content center">
+                <img
+                  src="https://jobs.weekday.works/_next/static/media/nothing-found.4d8f334c.png"
+                  height={200}
+                  width={200}
+                ></img>
               </div>
-            </div>
-          </>
+              <div className="content center">
+                <div className="content nojob">
+                  No Jobs available for this category at the moment
+                </div>
+              </div>
+            </>
+          )
         )}
       </Box>
       {isLoading && currentPage < totalPages && <div>Loading More...</div>}
